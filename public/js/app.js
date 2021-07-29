@@ -1,6 +1,6 @@
 
 
-console.log('client side javascrip is loading')
+console.log('client side javascript is loading')
 
 
 const weatherForm = document.querySelector('form')
