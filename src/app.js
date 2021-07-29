@@ -3,7 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 require('dotenv').config()
 
-// console.log(process.env)
+
 
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
@@ -11,18 +11,16 @@ const forecast = require('./utils/forecast')
 const app = express()
 const port = process.env.PORT || 3000
 
-//Define path for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
-// the default folder for express is 'views', if I change the name by 'templates', I must create a new path for it
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
-//setup handlebars engine and views location
-app.set('view engine', 'hbs') //<-- setup engine
-app.set('views', viewsPath)  //<-- setup dynamic path
+
+app.set('view engine', 'hbs') 
+app.set('views', viewsPath)  
 hbs.registerPartials(partialsPath)
 
-//setup static directoru to serve
+
 app.use(express.static(publicDirectoryPath))
 
 
@@ -68,7 +66,7 @@ app.get('/weather', (req, res) => {
         })
 
     }
-    // add empty object default values ={}
+  
     geocode(req.query.address, (error, { latitude, longitude, location } = {}) => {
         if (error) {
             return res.send({ error })
