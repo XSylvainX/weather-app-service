@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/Weather.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>About</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <div class="about-contain">
+            <img class="port-responsive" src="/img/natural.jpg">
+
+            <p>Bonjour, Cette application météo est un projet personnel qui a été réalisé à l'aide de
+                <strong>WeatherStack - REST
+                    API</strong> et <strong>Mapbox Geoding API</strong>. L'ensemble repose sur l'exploitation de <span
+                    class="nd">NodeJs</span>
+                pour
+                le back-end et
+                l'utilisation de <span class="hd">Handlebars</span> pour gérer la partie Front-end.
+            </p>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>
